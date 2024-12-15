@@ -5,8 +5,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background: #ccc6c6;
     overflow: hidden;
+    height: 200vh;
 }
 
 .store {
@@ -67,15 +70,17 @@ body {
 }
 
 .item .content {
-    position: absolute;
+    display: none;
+    position: relative;
     top: 50%;
     left: 5%; 
-    width: 90%;
-    text-align: left;
+    width: 60vw;
+    text-align: justify;
     color: #eee;
     transform: translate(0, -50%);
     font-family: system-ui;
-    display: none;
+    border-radius: 20px;
+    background-color: rgb(255,255,255,0.4)
 }
 
 .slide .item:nth-child(2) .content {
@@ -87,14 +92,14 @@ body {
     display: block;
     margin: 0 auto 20px 15%;
     width: 15vh;
-    opacity: 0;
+    opacity: 1;
     animation: animate 1s ease-in-out 1 forwards;
 }
 
 .content .des {
     margin-top: 10px;
     margin-bottom: 20px;
-    opacity: 0;
+    opacity: 1;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
     color: #0f0f0f;
     width: 400px;
@@ -106,7 +111,7 @@ body {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
     text-decoration: none;
 }
